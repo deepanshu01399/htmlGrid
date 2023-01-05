@@ -1,0 +1,24 @@
+/*.section{
+    &-subparentclass{}// eska matlb hai  section-subparentclass
+    }
+
+*/
+
+//1. color:set-text-color(#333)
+@function set-text-color($color) {
+    @if (lightness($color) > 50) {
+        @return #000; 
+    }
+    @else {
+        @return #333;
+    }
+}
+// 2. transform(rotate(-20deg)); & Darken/lighten
+@mixin transform($property){
+    -ms-transform: $property;
+    -webkit-transform: $property;
+    transform: $property;
+    color: darken($color: #000000, $amount: 10);
+}
+//4.
+
